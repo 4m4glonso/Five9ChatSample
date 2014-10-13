@@ -1,0 +1,160 @@
+body {
+    font-size: 15px;
+}
+
+h1.ui-title  {
+    margin: 0px !important;
+    font-size: 24px;
+}
+
+.ui-content {
+    border: 0;
+}
+
+p {
+    margin: 0px;
+}
+
+label {
+	color: rgb(91, 103, 112) !important;
+	font-size: 14px !important;
+}
+
+span, select {
+	font-weight: normal !important;
+}
+
+.ui-input-text input, 
+.ui-input-search input {
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 0.3em !important;
+}
+
+.ui-page-theme-a .ui-focus,
+html .ui-bar-a .ui-focus,
+html .ui-body-a .ui-focus,
+html body .ui-group-theme-a .ui-focus,
+html head + body .ui-btn-a.ui-focus,
+html head + body .ui-body-a.ui-focus {
+	-webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none; 
+}
+
+textarea, textarea:hover, textarea:focus, textarea:active {
+	background: rgb(255, 255, 255) !important;
+	border-radius: 0.3em !important;
+	border-color: rgb(150, 150, 150) !important;
+	border-style: solid !important; 
+	border-width: 1px !important;
+	resize: none !important; 
+}
+
+select {
+	background-color: rgb(255, 255, 255);
+}
+
+div[data-role="footer"] {
+    border: none !important;
+}
+
+.five9-ivr-back-btn:after {
+    background-image: url(images/icons-png/carat-l-black.png) !important;
+}
+
+.five9-ivr-send-btn,
+.five9-ivr-back-btn,
+.five9-ivr-right-btn {
+    color: #288DC1 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.five9-ivr-send-btn {
+	padding: 10px 0px 0px 0px;
+}
+
+.five9-ivr-right-btn:after {
+    background-image: url(images/icons-png/carat-r-black.png) !important;
+}
+
+#profiles-button {
+	background-color: white;
+	color: rgb(8, 46, 78);
+	border-radius: 0.3em;
+	border-style: solid !important; 
+	border-width: 1px !important;
+	border-color: rgb(150, 150, 150) !important;
+	padding-bottom: 7px !important;
+	padding-top: 7px !important;
+	padding-left: 6px ! important;
+}
+#profiles-button > span {
+	text-align: left;
+}
+
+.ui-icon-carat-d:after {
+	background-image: url(images/icons-png/carat-d-black.png) !important;
+}
+
+
+.five9-ivr-start-btn,
+.five9-ivr-cancel-btn {
+    display: block !important;
+    width: 94% !important;
+    border: none !important;
+    border-radius: 6px !important;
+    margin: 0px auto !important;
+    margin-top: 6px !important;
+    margin-bottom: 10px !important;
+	font-weight: normal !important;
+    font-size: 18px !important;
+    padding: 10px 0px 10px 0px !important;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.five9-ivr-cancel-btn .ui-btn-inner,
+.five9-ivr-start-btn .ui-btn-inner {
+    font-size: 24px;
+}
+
+.five9-ivr-start-btn { 
+    font-weight: normal !important; 
+	text-shadow: none !important;
+	color: rgb(255, 255, 255) !important;
+    background-color: rgb(40, 121, 179) !important;
+}
+
+.five9-ivr-cancel-btn {
+    font-weight: 400;
+	color: #288DC1 !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.ui-btn-icon-left:after,
+.ui-btn-icon-right:after,
+.ui-btn-icon-top:after,
+.ui-btn-icon-bottom:after,
+.ui-btn-icon-notext:after {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.five9-ewt-time-left p:first-child {
+    font-size: 2.5em;
+    font-weight: 100;
+    color: #336699;
+    margin: 15px;
+    text-shadow: none;
+}
+
+.five9-ewt-time-left .five9-progress-bar {
+    display: block;
+    height: 15px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url('../images/gradient_01.png');
+    background-repeat: repeat-x;
+}

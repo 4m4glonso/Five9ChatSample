@@ -1,0 +1,277 @@
+* { 
+    margin: 0px; padding: 0px;
+}
+
+body { 
+    height: 100%; cursor:default; background-color : rgb(255, 255, 255); overflow: hidden;
+}
+/*
+hr {
+	background-color: rgb(55, 96, 146);	
+}
+*/
+div.table {
+    display: table; width: 100%; height: 100%;
+}
+
+div.row {
+    display: table-row; width: 100%; 
+}
+
+div.cell {
+    display: table-cell; width: 100%; vertical-align: middle;
+}
+
+/*
+div.line {
+	height: 1px; background-color: rgb(55, 96, 146);
+}
+*/
+
+#inputContainer > div { 
+	border-radius: 0.3em !important; border-color: rgb(150, 150, 150) !important; margin-top: 0px; margin-bottom : 20px;
+}
+
+#inputContainer > label {
+	margin-bottom : 0px;
+}
+
+#inputContainer > textarea {
+	margin-top : 0px;
+}
+
+/* iPhone [portrait + landscape] */
+/* @media only screen and (max-device-width: 320px) { */
+@media screen and (max-device-width: 480px) {
+	div.vivrConsole {
+		height: 100% !important; width: 100% !important;
+	}
+ 	/*
+	div.chatHeader {
+		height: 40px; padding-left: 10px; padding-right: 10px; padding-top:4px
+	}
+	
+	div.header-logo-container-small {
+		float: left; width: 56px; height: 30px;
+	}
+	
+	div.header-logo-container-large {
+		display: none;
+	}
+
+	div.header-logo {
+		height: 30px; background-size: 56px 30px; background-repeat: no-repeat; background-position: center; background-image: url(../images/LogoFooter.png); 
+	}
+	
+	div.header-button-container {
+		float: right; width: 18px; height: 30px;
+	}
+	
+	div.header-title-container {
+		height: 30px; margin-left: 56px; padding-top: 8px; font-size: 24px;
+	}
+
+	div.lineContainer {
+		height: 1px; padding-top: 4px; padding-bottom: 4px;
+	}
+	
+	#information div.header-button-container {
+		display: none;
+	}
+	*/
+}
+
+/* Other Screen Resolution */
+@media only screen and (min-device-width: 768px) {
+	body { 
+    	height: 500px; width: 400px; 
+	}
+	/*
+	div.chatHeader {
+		height: 40px; padding-left: 10px; padding-right: 10px; padding-top:4px
+	}
+	
+	div.header-logo-container-small {
+		display: none;
+	}
+
+	div.header-logo-container-large {
+		width: 80px; height: 42px; margin: 0 auto;
+	}
+	
+	div.header-logo {
+		height: 42px; background-size: 80px 42px; background-repeat: no-repeat; background-position: center; background-image: url(../images/LogoFooter.png); 
+	}
+	
+	div.header-button-container {
+		float: right; width: 18px; height: 42px;
+	}
+	
+	div.header-title-container {
+		height: 30px; margin-left: 56px; margin-right: 18px; font-size: 28px;
+	}
+	
+	div.lineContainer {
+		height: 1px; padding-top: 10px; padding-bottom: 10px;
+	}
+	*/
+}
+/*
+div.header-container {
+	margin:0 auto; 
+}
+
+div.chatFooter {
+	height: 22px; padding-top: 10px; padding-bottom: 10px;
+}
+
+div.chatDescription {
+	height: 36px; padding-bottom: 6px;
+}
+
+*/
+
+#conversation-page.ui-page {
+ 	height: 100% !important;
+}
+
+div.chatContent {
+	height: 100%; padding: 0px 0px 6px 0px;
+}
+
+div.messages {
+	font-size: 14px; height: 100%; overflow-x: hidden; overflow-y: auto;
+}
+/* 
+div.chatContainer {
+	height: 100%; background: linear-gradient(180deg, rgba(220, 230, 242, 0.80) 0%, rgba(37, 64, 97, 0.80) 100%); 
+}
+*/
+/*
+div.header-button {
+	width: 24px; height: 32px; float: right;
+}
+
+div.center {
+	padding-left: 10px; padding-right: 10px;
+}
+*/
+/*
+div.informationContainer {
+	height: 40px;
+}
+
+div.informationContainerLarge {
+	height: 80px;
+}
+*/
+/*
+div.label {
+	height: 30px; width: 70px; float: left; padding-right: 10px; text-align: right; overflow: hidde;
+}
+*/
+/*
+div.inputContainer  {
+	height: 30px; width: 200px; float: left; padding-right: 4px; border-radius: 6px; background-color: rgb(255, 255, 255); margin-bottom: 10px;
+}
+
+div.inputContainerTextarea {
+	height: 60px; padding: 4px;
+}
+
+div.required {
+	height: 40px; width: 10px; float: left; background-size: 10px 10px; background-repeat: no-repeat; background-position: 50% 10%; background-image: url(../images/input/required.png);  
+}
+
+div.notRequired {
+	height: 40px; width: 10px; float: left; 
+}
+*/
+div.chatInputMessageContainer {
+	padding: 6px 4px 6px 4px; background-color: rgb(221, 221, 221);
+}
+/*
+div.horizontalCenter {
+    margin-left:auto; margin-right:auto;
+}
+
+div.verticalCenter {
+	display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center;
+}
+*/
+div.loadingImage {
+	width: 100%; height: 150px; background-image: url("../images/waiting/waiting.gif"); background-position: center; background-repeat: no-repeat; background-size: 150px 150px;
+}
+
+div.typing {
+	height: 30px; width: 30px; background-size: 20px 20px; background-position: left; background-repeat: no-repeat; background-image: url("../images/typing.gif");
+}
+/*
+div.origin {
+	text-align: left; margin-top: 10px; font-weight: bold;
+}
+*/
+div.messageContainerAgent {
+	margin-left: 6px; height: auto; overflow: auto;
+}
+
+div.messageContainerClient {
+	margin-right: 6px; height: auto; overflow: auto;
+}
+
+div.innerContainer {
+	width: 250px;
+}
+
+div.innerContainer > label{
+	text-align: left; 
+	margin-top: 4px;
+	margin-bottom: 2px;
+}
+
+div.messageContainerAgent > div.innerContainer {
+	float: left;
+}
+
+div.messageContainerClient > div.innerContainer {
+	float: right;
+}
+
+div.messageContainer {
+	height: auto; overflow: hidden; margin: 2px 6px 4px 0px; border-radius: 6px; padding: 2px 6px 2px 6px; -webkit-box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5); -moz-box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5); box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+div.messageContainerAgent div.messageContainer {
+	background-color: rgb(255, 255, 255);
+}
+
+div.messageContainerClient div.messageContainer {
+	background-color: rgb(223, 238, 246);
+}
+
+div.message  {
+	overflow: hidden; text-align: left; word-wrap: break-word; word-break: break-word; white-space: normal;
+}
+
+div.chatDisplayTime {
+	line-height: 20px; float: right; text-align: right; padding-left: 6px;
+}
+
+.error {
+	color: rgb(197, 15, 60);
+}
+/*
+div.blockAccess  {
+	position: absolute; height: 100%; width: 100%; top: 0px; left: 0px; z-index: 100; background: linear-gradient(top, rgba(255, 255, 255, .3) 24%, rgba(100, 100, 100, .3) 100%);  
+}
+*/
+/*
+div.popupOverview {
+	height: 200px; width: 215px; overflow-y: auto; position: relative; white-space: initial;	
+}
+*/
+/*
+#information div.header-button-container, #connecting div.header-button-container {
+	display: none;
+}
+*/

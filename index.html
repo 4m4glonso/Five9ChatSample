@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Five9 Chat Sample</title>
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+		<div class='container-fluid'>
+			<div class="row-fluid" >
+				<div class="col-lg-12">
+					<div class="pull-right">
+						<img src="Five9Logo.gif"></img>
+					</div>
+					<h1>Five9 Chat Sample</h1>
+				</div>
+			</div>
+			<div class="row-fluid" >
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row-fluid">
+								<div class="col-lg-12">
+									<p>The following form is for flexibility in testing the Five9 Chat functionality.  In a production deployment you would typically hide the form fields, or hard-code the values in Javascript.</p>
+									<form role="form">
+										<div class="form-group">
+											  <label for="f9domain">Domain</label>
+											  <input type="text" id="f9domain" class="form-control" >
+										</div>
+										<div class="form-group">
+											  <label for="f9campaign">Campaign</label>
+											  <input type="text" id="f9campaign" class="form-control" >
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row-fluid">
+								<div class="col-lg-12">
+									<!-- Add an id called checkVIVR -->
+									<a id="launchChat" class="btn btn-large btn-primary" onClick="launchChatWindow()">
+										Launch Chat [window.open()]
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- CHAT HTML -->
+<div id="five9_chat_window">
+      <div onClick="clickedChat(); return false;" class="chatroomButton" style="background-image:url('Five9Chat/images/chatNow.png');"></div>
+      <div class="chatBox"></div>
+
+      <script>
+      function launchChatWindow()
+      {
+	  var tenant = $('#f9domain').val();
+	  var profiles = $('#f9campaign').val();
+
+	  window.open('Five9Chat/chat.html?tenant=' + tenant + '&profiles=' + profiles + '&sessionId=',
+		      'Five9Chat',
+		      'width=320,height=500,location=no,menubar=no,resizable=no,scrollbars=no,status=no,titlebar=no,toolbar=no');
+      }
+
+      function clickedChat()
+      {
+            if(jQuery('#five9_chat_window .chatBox').html().length > 0)
+            {
+                $('#five9_chat_window .chatBox').animate({height:"0px"});
+                $('#five9_chat_window .chatBox').html('');
+            }
+            else
+            {
+                var tenant = $('#f9domain').val();
+		var profiles = $('#f9campaign').val();
+
+                $('#five9_chat_window .chatBox').animate({height:"500px"});
+                $('#five9_chat_window .chatBox').html('<iframe src="Five9Chat/chat.html?tenant=' + tenant + '&profiles=' + profiles + '&sessionId=" height="500px" width="320px"></iframe>');
+            }
+      }
+      </script>
+      <style>
+      #five9_chat_window
+      {
+        display:block;
+        position:fixed;
+        bottom:0px;
+        right:10%;
+        z-index:9000;
+      }
+      #five9_chat_window .chatroomButton
+      {
+        height: 68px;
+        width: 320px;
+        display: block;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+        cursor:pointer;
+      }
+      .chatBox
+      {
+        display:block;
+        position:relative;
+        overflow:hidden;
+        background-color:black;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(104, 104, 104, 0.75);
+        -moz-box-shadow:    0px 0px 10px 0px rgba(104, 104, 104, 0.75);
+        box-shadow:         0px 0px 10px 0px rgba(104, 104, 104, 0.75);
+        -moz-border-radius-topleft: 10px;
+        -webkit-border-top-left-radius: 10px;
+        border-top-left-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        -webkit-border-top-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .chatBox iframe
+      {
+        display:block;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+      }
+      @media (max-width: 980px)
+      {
+        #five9_chat_window
+        {
+          right:0px;
+        }
+      }
+      @media (max-width: 780px)
+      {
+        #five9_chat_window
+        {
+          bottom:50px;
+          right:0px;
+        }
+      }
+      @media (max-width: 640px)
+      {
+        #five9_chat_window
+        {
+          display:none;
+        }
+      }
+      </style>
+    </div>
+<!-- CHAT HTML -->
+
+	</body>
+</html>

@@ -1,0 +1,215 @@
+div.popupOverview > .emoticon {
+	width: 23px;
+    height: 23px;
+    overflow: hidden;
+    text-align: left;
+	/* background-size: 21px 21px; */
+	padding: 3px;
+}
+
+div.message > .emoticon {
+     vertical-align: middle; 
+}
+
+.emoticon {
+	width: 20px !important; height: 20px; display: inline-block; text-indent: -10000px;
+}
+
+img {
+	border: 0;
+}
+
+div.popupOverview > .emoticon:hover {
+    cursor: pointer;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	-moz-box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.emoticon-smile { background-image: url('../../images/emoticons/smile.png'); }
+
+button.emoticon-smile[disabled] { cursor:default; background-image: url('../../images/emoticons/smile.png'); }
+button.emoticon-smile[disabled]:active { background-image: url('../../images/emoticons/smile.png'); }
+button.emoticon-smile[disabled]:hover { background-image: url('../../images/emoticons/smile.png'); }
+
+/*
+.emoticon-angel { background-image: url('../../images/emoticons/angel.png'); }
+.emoticon-angry { background-image: url('../../images/emoticons/angry.png'); }
+.emoticon-bandit { background-image: url('../../images/emoticons/bandit.png'); }
+.emoticon-bear { background-image: url('../../images/emoticons/bear.png'); }
+.emoticon-beer { background-image: url('../../images/emoticons/beer.png'); }
+.emoticon-big-smile { background-image: url('../../images/emoticons/bigsmile.png'); }
+.emoticon-blush { background-image: url('../../images/emoticons/blush.png'); }
+.emoticon-bow { background-image: url('../../images/emoticons/bow.png'); }
+.emoticon-broken-heart { background-image: url('../../images/emoticons/brokenheart.png'); }
+.emoticon-bug { background-image: url('../../images/emoticons/bug.png'); }
+.emoticon-cake { background-image: url('../../images/emoticons/cake.png'); }
+.emoticon-call { background-image: url('../../images/emoticons/call.png'); }
+.emoticon-cash { background-image: url('../../images/emoticons/cash.png'); }
+.emoticon-clapping-hands { background-image: url('../../images/emoticons/clapping.png'); }
+.emoticon-coffee { background-image: url('../../images/emoticons/coffee.png'); }
+.emoticon-cool { background-image: url('../../images/emoticons/cool.png'); }
+.emoticon-covered-laugh { background-image: url('../../images/emoticons/giggle.png'); }
+.emoticon-crying { background-image: url('../../images/emoticons/crying.png'); }
+.emoticon-dance { background-image: url('../../images/emoticons/dance.png'); }
+.emoticon-devil { background-image: url('../../images/emoticons/devil.png'); }
+.emoticon-doh { background-image: url('../../images/emoticons/doh.png'); }
+.emoticon-drink { background-image: url('../../images/emoticons/drink.png'); }
+.emoticon-drunk { background-image: url('../../images/emoticons/drunk.png'); }
+.emoticon-dull { background-image: url('../../images/emoticons/dull.png'); }
+.emoticon-emo { background-image: url('../../images/emoticons/emo.png'); }
+.emoticon-envy { background-image: url('../../images/emoticons/envy.png'); }
+.emoticon-evil-grin { background-image: url('../../images/emoticons/evilgrin.png'); }
+.emoticon-face-palm { background-image: url('../../images/emoticons/facepalm.png'); }
+.emoticon-fingers-crossed { background-image: url('../../images/emoticons/fingerscrossed.png'); }
+.emoticon-finger { background-image: url('../../images/emoticons/middlefinger.png'); }
+.emoticon-flower { background-image: url('../../images/emoticons/flower.png'); }
+.emoticon-fubar { background-image: url('../../images/emoticons/fubar.png'); }
+.emoticon-handshake { background-image: url('../../images/emoticons/handshake.png'); }
+.emoticon-happy { background-image: url('../../images/emoticons/happy.png'); }
+.emoticon-headbang { background-image: url('../../images/emoticons/headbang.png'); }
+.emoticon-heart { background-image: url('../../images/emoticons/heart.png'); }
+.emoticon-heidy { background-image: url('../../images/emoticons/heidy.png'); }
+.emoticon-hi { background-image: url('../../images/emoticons/hi.png'); }
+.emoticon-high-five { background-image: url('../../images/emoticons/highfive.png'); }
+.emoticon-in-love { background-image: url('../../images/emoticons/inlove.png'); }
+.emoticon-it-wasnt-me { background-image: url('../../images/emoticons/itwasntme.png'); }
+.emoticon-kiss { background-image: url('../../images/emoticons/kiss.png'); }
+.emoticon-lalala { background-image: url('../../images/emoticons/lalala.png'); }
+.emoticon-lips-sealed { background-image: url('../../images/emoticons/lipssealed.png'); }
+.emoticon-mail { background-image: url('../../images/emoticons/mail.png'); }
+.emoticon-make-up { background-image: url('../../images/emoticons/makeup.png'); }
+.emoticon-mmm { background-image: url('../../images/emoticons/mmm.png'); }
+.emoticon-mooning { background-image: url('../../images/emoticons/mooning.png'); }
+.emoticon-movie { background-image: url('../../images/emoticons/movie.png'); }
+.emoticon-muscle { background-image: url('../../images/emoticons/muscle.png'); }
+.emoticon-music { background-image: url('../../images/emoticons/music.png'); }
+.emoticon-nerd { background-image: url('../../images/emoticons/nerd.png'); }
+.emoticon-ninja { background-image: url('../../images/emoticons/ninja.png'); }
+.emoticon-no { background-image: url('../../images/emoticons/no.png'); }
+.emoticon-nodding { background-image: url('../../images/emoticons/nod.png'); }
+.emoticon-party { background-image: url('../../images/emoticons/party.png'); }
+.emoticon-phone { background-image: url('../../images/emoticons/phone.png'); }
+.emoticon-pizza { background-image: url('../../images/emoticons/pizza.png'); }
+.emoticon-poolparty { background-image: url('../../images/emoticons/poolparty.png'); }
+.emoticon-puke { background-image: url('../../images/emoticons/puke.png'); }
+.emoticon-punch { background-image: url('../../images/emoticons/punch.png'); }
+.emoticon-rain { background-image: url('../../images/emoticons/rain.png'); }
+.emoticon-rock { background-image: url('../../images/emoticons/rock.png'); }
+.emoticon-rofl { background-image: url('../../images/emoticons/rofl.png'); }
+.emoticon-sad-smile { background-image: url('../../images/emoticons/sadsmile.png'); }
+.emoticon-shaking { background-image: url('../../images/emoticons/shake.png'); }
+.emoticon-sleepy { background-image: url('../../images/emoticons/sleepy.png'); }
+.emoticon-smile { background-image: url('../../images/emoticons/smile.png'); }
+.emoticon-smirking { background-image: url('../../images/emoticons/smirk.png'); }
+.emoticon-smoking { background-image: url('../../images/emoticons/smoke.png'); }
+.emoticon-speechless { background-image: url('../../images/emoticons/speechless.png'); }
+.emoticon-star { background-image: url('../../images/emoticons/star.png'); }
+.emoticon-sun { background-image: url('../../images/emoticons/sun.png'); }
+.emoticon-swearing { background-image: url('../../images/emoticons/swear.png'); }
+.emoticon-sweating { background-image: url('../../images/emoticons/sweating.png'); }
+.emoticon-talking { background-image: url('../../images/emoticons/talking.png'); }
+.emoticon-thinking { background-image: url('../../images/emoticons/thinking.png'); }
+.emoticon-time { background-image: url('../../images/emoticons/time.png'); }
+.emoticon-tmi { background-image: url('../../images/emoticons/tmi.png'); }
+.emoticon-toivo { background-image: url('../../images/emoticons/toivo.png'); }
+.emoticon-tongue-out { background-image: url('../../images/emoticons/tongueout.png'); }
+.emoticon-tumbleweed { background-image: url('../../images/emoticons/tumbleweed.png'); }
+.emoticon-wait { background-image: url('../../images/emoticons/wait.png'); }
+.emoticon-waiting { background-image: url('../../images/emoticons/waiting.png'); }
+.emoticon-whew { background-image: url('../../images/emoticons/whew.png'); }
+.emoticon-wfh { background-image: url('../../images/emoticons/wfh.png'); }
+.emoticon-wink { background-image: url('../../images/emoticons/wink.png'); }
+.emoticon-wondering { background-image: url('../../images/emoticons/wondering.png'); }
+.emoticon-worried { background-image: url('../../images/emoticons/worried.png'); }
+.emoticon-yawn { background-image: url('../../images/emoticons/yawn.png'); }
+.emoticon-yes { background-image: url('../../images/emoticons/yes.png'); }
+*/
+/*
+.emoticon-angel:hover { background-image: url('../../images/emoticons/dynamic/angel.gif'); }
+.emoticon-angry:hover { background-image: url('../../images/emoticons/dynamic/angry.gif'); }
+.emoticon-bandit:hover { background-image: url('../../images/emoticons/dynamic/bandit.gif'); }
+.emoticon-bear:hover { background-image: url('../../images/emoticons/dynamic/bear.gif'); }
+.emoticon-beer:hover { background-image: url('../../images/emoticons/dynamic/beer.gif'); }
+.emoticon-big-smile:hover { background-image: url('../../images/emoticons/dynamic/bigsmile.gif'); }
+.emoticon-blush:hover { background-image: url('../../images/emoticons/dynamic/blush.gif'); }
+.emoticon-bow:hover { background-image: url('../../images/emoticons/dynamic/bow.gif'); }
+.emoticon-broken-heart:hover { background-image: url('../../images/emoticons/dynamic/brokenheart.gif'); }
+.emoticon-bug:hover { background-image: url('../../images/emoticons/dynamic/bug.gif'); }
+.emoticon-cake:hover { background-image: url('../../images/emoticons/dynamic/cake.gif'); }
+.emoticon-call:hover { background-image: url('../../images/emoticons/dynamic/call.gif'); }
+.emoticon-cash:hover { background-image: url('../../images/emoticons/dynamic/cash.gif'); }
+.emoticon-clapping-hands:hover { background-image: url('../../images/emoticons/dynamic/clapping.gif'); }
+.emoticon-coffee:hover { background-image: url('../../images/emoticons/dynamic/coffee.gif'); }
+.emoticon-cool:hover { background-image: url('../../images/emoticons/dynamic/cool.gif'); }
+.emoticon-covered-laugh:hover { background-image: url('../../images/emoticons/dynamic/giggle.gif'); }
+.emoticon-crying:hover { background-image: url('../../images/emoticons/dynamic/crying.gif'); }
+.emoticon-dance:hover { background-image: url('../../images/emoticons/dynamic/dance.gif'); }
+.emoticon-devil:hover { background-image: url('../../images/emoticons/dynamic/devil.gif'); }
+.emoticon-doh!:hover { background-image: url('../../images/emoticons/dynamic/doh.gif'); }
+.emoticon-drink:hover { background-image: url('../../images/emoticons/dynamic/drink.gif'); }
+.emoticon-drunk:hover { background-image: url('../../images/emoticons/dynamic/drunk.gif'); }
+.emoticon-dull:hover { background-image: url('../../images/emoticons/dynamic/dull.gif'); }
+.emoticon-emo:hover { background-image: url('../../images/emoticons/dynamic/emo.gif'); }
+.emoticon-envy:hover { background-image: url('../../images/emoticons/dynamic/envy.gif'); }
+.emoticon-evil-grin:hover { background-image: url('../../images/emoticons/dynamic/evilgrin.gif'); }
+.emoticon-finger:hover { background-image: url('../../images/emoticons/dynamic/middlefinger.gif'); }
+.emoticon-flower:hover { background-image: url('../../images/emoticons/dynamic/flower.gif'); }
+.emoticon-fubar:hover { background-image: url('../../images/emoticons/dynamic/fubar.gif'); }
+.emoticon-handshake:hover { background-image: url('../../images/emoticons/dynamic/handshake.gif'); }
+.emoticon-happy:hover { background-image: url('../../images/emoticons/dynamic/happy.gif'); }
+.emoticon-headbang:hover { background-image: url('../../images/emoticons/dynamic/headbang.gif'); }
+.emoticon-heart:hover { background-image: url('../../images/emoticons/dynamic/heart.gif'); }
+.emoticon-heidy:hover { background-image: url('../../images/emoticons/dynamic/heidy.gif'); }
+.emoticon-hi:hover { background-image: url('../../images/emoticons/dynamic/hi.gif'); }
+.emoticon-in-love:hover { background-image: url('../../images/emoticons/dynamic/inlove.gif'); }
+.emoticon-it-wasnt-me:hover { background-image: url('../../images/emoticons/dynamic/itwasntme.gif'); }
+.emoticon-kiss:hover { background-image: url('../../images/emoticons/dynamic/kiss.gif'); }
+.emoticon-lips-sealed:hover { background-image: url('../../images/emoticons/dynamic/lipssealed.gif'); }
+.emoticon-mail:hover { background-image: url('../../images/emoticons/dynamic/mail.gif'); }
+.emoticon-make-up:hover { background-image: url('../../images/emoticons/dynamic/makeup.gif'); }
+.emoticon-mmm:hover { background-image: url('../../images/emoticons/dynamic/mmm.gif'); }
+.emoticon-mooning:hover { background-image: url('../../images/emoticons/dynamic/mooning.gif'); }
+.emoticon-movie:hover { background-image: url('../../images/emoticons/dynamic/movie.gif'); }
+.emoticon-muscle:hover { background-image: url('../../images/emoticons/dynamic/muscle.gif'); }
+.emoticon-music:hover { background-image: url('../../images/emoticons/dynamic/music.gif'); }
+.emoticon-nerd:hover { background-image: url('../../images/emoticons/dynamic/nerd.gif'); }
+.emoticon-ninja:hover { background-image: url('../../images/emoticons/dynamic/ninja.gif'); }
+.emoticon-no:hover { background-image: url('../../images/emoticons/dynamic/no.gif'); }
+.emoticon-nodding:hover { background-image: url('../../images/emoticons/dynamic/nod.gif'); }
+.emoticon-party:hover { background-image: url('../../images/emoticons/dynamic/party.gif'); }
+.emoticon-phone:hover { background-image: url('../../images/emoticons/dynamic/phone.gif'); }
+.emoticon-pizza:hover { background-image: url('../../images/emoticons/dynamic/pizza.gif'); }
+.emoticon-poolparty:hover { background-image: url('../../images/emoticons/dynamic/poolparty.gif'); }
+.emoticon-puke:hover { background-image: url('../../images/emoticons/dynamic/puke.gif'); }
+.emoticon-punch:hover { background-image: url('../../images/emoticons/dynamic/punch.gif'); }
+.emoticon-rain:hover { background-image: url('../../images/emoticons/dynamic/rain.gif'); }
+.emoticon-rock:hover { background-image: url('../../images/emoticons/dynamic/rock.gif'); }
+.emoticon-rofl:hover { background-image: url('../../images/emoticons/dynamic/rofl.gif'); }
+.emoticon-sad-smile:hover { background-image: url('../../images/emoticons/dynamic/sadsmile.gif'); }
+.emoticon-shaking:hover { background-image: url('../../images/emoticons/dynamic/shake.gif'); }
+.emoticon-sleepy:hover { background-image: url('../../images/emoticons/dynamic/sleepy.gif'); }
+.emoticon-smile:hover { background-image: url('../../images/emoticons/dynamic/smile.gif'); }
+.emoticon-smirking:hover { background-image: url('../../images/emoticons/dynamic/smirk.gif'); }
+.emoticon-smoking:hover { background-image: url('../../images/emoticons/dynamic/smoke.gif'); }
+.emoticon-speechless:hover { background-image: url('../../images/emoticons/dynamic/speechless.gif'); }
+.emoticon-star:hover { background-image: url('../../images/emoticons/dynamic/star.gif'); }
+.emoticon-sun:hover { background-image: url('../../images/emoticons/dynamic/sun.gif'); }
+.emoticon-swearing:hover { background-image: url('../../images/emoticons/dynamic/swear.gif'); }
+.emoticon-sweating:hover { background-image: url('../../images/emoticons/dynamic/sweating.gif'); }
+.emoticon-talking:hover { background-image: url('../../images/emoticons/dynamic/talking.gif'); }
+.emoticon-thinking:hover { background-image: url('../../images/emoticons/dynamic/thinking.gif'); }
+.emoticon-time:hover { background-image: url('../../images/emoticons/dynamic/time.gif'); }
+.emoticon-tmi:hover { background-image: url('../../images/emoticons/dynamic/tmi.gif'); }
+.emoticon-toivo:hover { background-image: url('../../images/emoticons/dynamic/toivo.gif'); }
+.emoticon-tongue-out:hover { background-image: url('../../images/emoticons/dynamic/tongueout.gif'); }
+.emoticon-wait:hover { background-image: url('../../images/emoticons/dynamic/wait.gif'); }
+.emoticon-whew:hover { background-image: url('../../images/emoticons/dynamic/whew.gif'); }
+.emoticon-wink:hover { background-image: url('../../images/emoticons/dynamic/wink.gif'); }
+.emoticon-wondering:hover { background-image: url('../../images/emoticons/dynamic/wondering.gif'); }
+.emoticon-worried:hover { background-image: url('../../images/emoticons/dynamic/worried.gif'); }
+.emoticon-yawn:hover { background-image: url('../../images/emoticons/dynamic/yawn.gif'); }
+.emoticon-yes:hover { background-image: url('../../images/emoticons/dynamic/yes.gif'); }
+*/

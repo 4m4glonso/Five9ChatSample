@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="-1">
+		
+		<title>Five9 Chat</title>
+		
+		<link href="css/jquery.mobile.structure-1.4.0.css" rel="stylesheet" type="text/css" media="Screen">
+		<link href="css/jquery.mobile.external-png-1.4.0.min.css" rel="stylesheet" type="text/css" media="Screen">
+		
+		<link href="css/themes/jquery.mobile.theme-default.css" rel="stylesheet" type="text/css" media="Screen">
+		
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="Screen">
+
+        <link href="css/chat.css" rel="Stylesheet" type="text/css" media="Screen" >
+        <link href="css/emoticons.css" rel="Stylesheet" type="text/css" media="Screen" >
+        
+		<script language="JavaScript" src="scripts/_lib/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/_lib/emoticons/emoticons.js" type="text/javascript"></script>
+        
+		<script language="JavaScript" src="scripts/_lib/jquery/jquery.mobile-1.4.0.min.js" type="text/javascript"></script>
+
+        <script language="JavaScript" src="scripts/session/Access.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/communication/SocketCommunication.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/communication/HTTPCommunication.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/communication/NetworkIndicator.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/utility/Utility.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/utility/Timezone.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/utility/Console.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/chat/ChatTyping.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/chat/ChatMessage.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/emoticons/PopupEmoticons.js" type="text/javascript"></script>
+
+        <script language="JavaScript" src="scripts/communication/MessageHandler.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/communication/MessageSender.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/communication/MessageTypes.js" type="text/javascript"></script>
+                
+		<script language="JavaScript" src="scripts/buttons/ButtonEventHandler.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/chat/Agent.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/chat/ChatMessageHandler.js" type="text/javascript"></script>
+        <script language="JavaScript" src="scripts/chat/ChatEventHandler.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/login/LoginEventHandler.js" type="text/javascript"></script>
+        
+        <script language="JavaScript" src="scripts/session/Session.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+			var COOKIE_NAME = "SoCoCareChat";
+			
+        	var browser = null;
+    		
+    	    function init(params) {
+                gSession = new Session();
+                gSession.setSessionId(params["sessionId"]);
+                gSession.setTenant(params["tenant"]);
+                gSession.setProfiles(params["profiles"]);
+                gSession.setCSS(params["css"]);
+                gSession.setTheme(params["theme"]);
+                
+                gMessageHandler = new MessageHandler();
+                gMessageSender = new MessageSender();
+                
+                gLoginEventHandler = new LoginEventHandler();
+                gSocketCommunication = new SocketCommunication();
+                
+                (gButtonEventHandler = new ButtonEventHandler()).init();
+                (gChatEventHandler = new ChatEventHandler()).init();
+                gChatMessageHandler = new ChatMessageHandler();
+                
+               	gHTTPCommunication = new HTTPCommunication();
+                
+                if (gSession.hasSessionId()) {
+                	gMessageSender.getSessionInformation(gSession.getSessionId());
+                	return ;
+                }
+                
+                if (gSession.getTenant() == null || gSession.getProfiles().length == 0) {
+                	$.mobile.changePage("#error-page");
+                } 
+		    }
+
+            function getUrlVars() {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+
+            $(document).ready(function() {
+                var params = getUrlVars();
+                init(params);
+
+            	browser = Utility.getBrowserType();
+            	
+            	$.mobile.changePage("#information-page");
+            	// $.mobile.changePage("#conversation-page");
+		    });
+		</script>
+	</head>
+	
+	<body>
+		<div id="information-page" data-role="page" data-theme="<%= theme %>"  style="">
+			<div data-role="header">
+				<p style="text-align: center;"><img src="images/logo.gif" style="height: 50px; margin: 5px;"/> </p>
+			</div>
+			
+			<div id="inputContainer" data-role="content">
+				<label>
+					Subject:
+				</label>
+				<select name="profiles" id="profiles">
+    			</select>
+
+				<label>
+					Name:
+				</label>
+				<input restrictions="{ &quot;type&quot;: &quot;digits&quot; , &quot;range&quot;:{ &quot;minlength&quot;:1, &quot;maxlength&quot;: 20} }" name="name" id="name" type="text" value="">
+				
+				<label>
+					Email:
+				</label>
+				<input restrictions="{ &quot;type&quot;: &quot;digits&quot; , &quot;range&quot;:{ &quot;minlength&quot;:1, &quot;maxlength&quot;: 20} }" name="email" id="email" type="text" value="">
+				
+				<label>
+					Question:
+				</label>
+				
+				<textarea style="height: 50px !important;" rows="6" cols="55" name="question" id="question"></textarea>
+			</div>
+			
+			<div data-position="fixed" data-theme="d" data-role="footer">
+				<a id="buttonOpenSession" data-role="button" data-wrapperels="false" data-iconshadow="false" data-shadow="false" data-corners="false" class="five9-ivr-start-btn" href="#">Start Chat</a>
+			</div>
+		</div>
+		
+		
+		<div id="connecting-page" data-role="page" data-theme="<%= theme %>">
+			<div data-role="header">
+				<p style="text-align: center;"><img src="images/logo.gif" style="height: 50px; margin: 5px;"/> </p>
+			</div>
+			
+			<div data-role="content">
+				<h2 id="informationMessage">
+					Please wait while we connect you to our online support agent
+				</h2>
+				
+				<p style="text-align:center"><i class="fa fa-spinner fa-spin fa-3x"></i></p>
+			</div>
+		</div>
+		
+		
+		<div id="error-page" data-role="page" data-theme="<%= theme %>">
+			<div data-role="header">
+				<p style="text-align: center;"><img src="images/logo.gif" style="height: 50px; margin: 5px;"/> </p>
+			</div>
+			
+			<div data-role="content">
+				<h2>
+					There is a problem with the connection, please try again!
+				</h2>
+			</div>
+		</div>
+	
+		<div id="noService-page" data-role="page" data-theme="<%= theme %>">
+			<div data-role="header">
+				<p style="text-align: center;"><img src="images/logo.gif" style="height: 50px; margin: 5px;"/> </p>
+			</div>
+			
+			<div data-role="content">
+				<h2 id="noServiceMessage">
+				</h2>
+			</div>
+			
+			<div data-position="fixed" data-theme="d" data-role="footer">
+				<a id="buttonSendEmail" data-role="button" data-wrapperels="false" data-iconshadow="false" data-shadow="false" data-corners="false" class="five9-ivr-start-btn" href="#">Send an email</a>
+			</div>
+			
+		</div>
+
+		<div id="conversation-page" data-role="page" data-theme="<%= theme %>" style="height: 100% !important;">
+			<div class="table">
+				<div class="row">
+					<div class="cell" style="height: 42px;">
+						<div data-role="header">
+                          				<p style="text-align: center;"><img src="images/logo.gif" style="height: 50px; margin: 5px;"/> </p>
+							<a id="buttonTerminateChat" data-inline="true" class="ui-btn-right five9-ivr-right-btn" data-iconpos="right" data-icon="" href="#" data-role="button" role="button">Terminate</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="cell chatContent">
+						<div class="messages" id="messages">
+						</div>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="cell" style="height: 50px; ">
+						<div class="chatInputMessageContainer" style="">
+							<div style="height: 100%; float: right;">
+								<a id="buttonSend" data-rel="Send" data-inline="true" class="five9-ivr-send-btn" data-iconpos="" data-icon="" href="#" data-role="button" role="button">Send</a>
+							</div>
+							
+							<div style="height: 50px; overflow: hidden; padding-right: 6px;">
+								<textarea id="inputMessage" class="chatInputMessage" maxlength="2048" wrap="hard" style="height: 112px; margin: 0px 6px 0px 0px;"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
